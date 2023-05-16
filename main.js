@@ -1,85 +1,145 @@
-//CONDICIONAL IF
-//Programa para determinar la mayoría de edad
+//****************************************** PRE-ENTEREGA 2******************************************* */
 
-const edad = parseInt(prompt("Ingrese su edad: "));
+//Clase constructora Productos
 
-if (edad < 18 && edad > 0){
-    alert("Usted es menor de edad, NO puede acceder a este contenido.");
-}else if (edad >= 18){
-    alert("Bienvenido, usted es mayor de edad.")
-}else{
-    alert("Vuelva a ingresar su edad.");  
-}
-
-
-//CICLOS FOR Y WHILE
-//Entradas para escuchar a Wos y Mini calculadora 
-
-//Entradas para escuchar a Wos (For)
-for (let i = 1; i <= 10; i++) {
-
-    let nombre = prompt("Ingrese su nombre");
-    alert(`Entrada n° ${i}: ${nombre}.`)
-}
-
-alert("Entradas agotadas");
-
-
-//Mini calculadora (While y Switch)
-
-let num1 = parseInt(prompt("Ingrese un numero: "));
-let num2 = parseInt(prompt("Ingrese un segundo numero: "));
-let operacion = prompt("Ingrese la operacion que desea realizar: ");
-let resultado;
-
-while (operacion != "salir") {
-    switch (operacion) {
-        case "+":
-            resultado = num1 + num2;
-            alert("La suma es: " + resultado);
-            break;
-
-        case "-":
-            resultado = num1 - num2;
-            alert("La resta es: " + resultado);
-            break;
-
-        case "*":
-            resultado = num1 * num2;
-            alert("La multiplicacion es: " + resultado);
-            break;
-
-        case "/":
-            resultado = num1 / num2;
-            alert("La division es: " + resultado);
-            break;
-    
-        default:
-            alert("Error. Ingrese nuevamente la operacion a realizar.");
-            break;
+class Productos{
+    constructor(nombre, precio){
+        this.nombre = nombre;
+        this.precio = precio;
+        this.vendido = false;
     }
-        num1 = parseInt(prompt("Ingrese un numero: "));
-        num2 = parseInt(prompt("Ingrese un segundo numero: "));
-        operacion = prompt("Ingrese la operacion que desea realizar: ");
+
+        vender(){
+            this.vendido = true;
+        }
 }
 
-//FUNCIONES
-//Cambio de divisa
+//Productos
 
-//Función arrow
-let cotizarDolar = pesos => {return dolar = pesos / 500} 
+const remera = new Productos("remera", 6000);
+const campera = new Productos("campera", 12000);
+const pantalon = new Productos("pantalon", 8000);
+const zapatos = new Productos("zapatos", 30000);
+const corbata = new Productos("corbata", 4000);
+const saco = new Productos("saco", 16000);
+const medias = new Productos("medias", 2500);
+const gorra = new Productos("gorra", 4500);
+const camisa = new Productos("camisa", 5000);
+const pollera = new Productos("pollera", 3000);
 
-//Llamamos a la funcion arrow
-cotizarDolar(parseInt(prompt("Ingrese la cantidad de pesos a cambiar: ")));
-alert(`La cantidad de dolares es de $ ${dolar}`);
+//Arreglo para guardar productos
+
+const arrayProductos = [];
+
+//Cargar productos
+
+arrayProductos.push(remera);
+arrayProductos.push(campera);
+arrayProductos.push(pantalon);
+arrayProductos.push(zapatos);
+arrayProductos.push(corbata);
+arrayProductos.push(saco);
+arrayProductos.push(medias);
+arrayProductos.push(gorra);
+arrayProductos.push(camisa);
+arrayProductos.push(pollera);
 
 
-//Funcion
-function cotizarPesos(dolar) {
-    pesos = dolar * 500;
-    return pesos;
-}
+//mostramos array
 
-//Llamamos a la funcion
-cotizarPesos(parseInt(prompt("Ingrese la cantidad de dolares a cambiar: ")));
-alert(`La cantidad de pesos es de $ ${pesos}`);
+console.log(arrayProductos);
+
+//Mostramos el menú de opciones
+  
+ function menu() {
+    alert('Bienvenido a la tienda RopAncha');
+    //Pedimos al usuario elegir una opcion 
+    let opcion = parseInt(
+      prompt(
+        'Ingrese una opción: \n 1) Comprar ropa \n 2) Donar ropa \n 3) Dar de baja \n 4) Salir'
+      )
+    );
+//Retornamos la opcion elegida
+    return opcion;
+  }
+
+  //Funcion para comprar ropa
+ 
+  function comprar(){
+    //Pedimos al usuario el numero de prendas a comprar
+    let cantidad = parseInt(prompt("Ingrese la cantidad de prendas a comprar: "));
+    //Mostramos el stock de productos
+    alert(`Productos en stock \n ${arrayProductos[0].nombre}  \n ${arrayProductos[1].nombre}  \n ${arrayProductos[2].nombre}  \n ${arrayProductos[3].nombre}  \n ${arrayProductos[4].nombre}  \n ${arrayProductos[5].nombre}  \n ${arrayProductos[6].nombre}  \n ${arrayProductos[7].nombre}  \n ${arrayProductos[8].nombre}  \n ${arrayProductos[9].nombre}  \n`);
+    //Iniciamos la variable del costo total
+    let precioTotal = 0;
+    //Repetimos esta accion el n° de veces indicado por el usuario
+    for(i = 0; i < cantidad; i++){
+      //Pedimos al usuario el nombre de la prenda
+      let nombrePrenda = prompt("Ingrese la prenda que desea comprar: ");
+      //Verificamos la existencia de la prenda
+      let precioPrenda = arrayProductos.find((el) => el.nombre === nombrePrenda);
+      //Sumamos el precio de la prenda en la Variable de costo total
+      precioTotal += precioPrenda.precio;
+    }
+    //Mostramos al usuario el costo de su compra
+    alert(`El costo final de su compra es de $${precioTotal}`);
+  } 
+    //Funcion para donar ropa
+
+  function donar(){
+    alert("Gracias por donar ropa a nuestra tienda RopAncha :)");
+    //Pedimos al usuario el numero de prendas a donar
+    let cantidad = parseInt(prompt("Ingrese la cantidad de prendas a donar: "));
+    //Repetimos esta accion el n° de veces indicado por el usuario
+    for(i = 0; i < cantidad; i++){
+      //Pedimos el nombre de la prenda
+    let nombreDonacion = prompt("Ingrese el nombre de la prenda que esta donando: ");
+    //Pedimos el precio estimado por la prenda
+    let precioDonacion = parseInt(prompt("Ingrese el precio de la prenda que esta donando: "));
+    //Creamos un nuevo objeto con los datos recibidos por el usuario
+    const donacion = new Productos(nombreDonacion, precioDonacion);
+    //Agregamos al array el nuevo producto
+    arrayProductos.push(donacion);
+    }
+    //Mostramos el array con los nuevos productos
+    console.log(arrayProductos);
+    alert("Gracias por su donacion!");
+  }
+
+
+    //Funcion para dar de baja un producto
+
+    function eliminar(){
+      let prendaAEliminar = prompt("Ingrese la prenda que quiere dar de baja");
+      const arrayActualizado = arrayProductos.filter((prenda) => prenda.nombre != prendaAEliminar);
+      console.log(arrayActualizado); 
+      alert(`Ya dimos de baja el producto ${prendaAEliminar}`);
+    }
+
+   //Funcion para salir
+
+     function salir() {
+      alert('Gracias por visitar RopAncha');
+    } 
+
+    //Muestro el menu de opciones
+  
+  let opcion = menu();
+  switch (opcion) {
+    case 1:
+      comprar();
+      break;
+    case 2:
+      donar();
+      break;
+    case 3:
+      eliminar();
+      break;
+    case 4:
+      salir();
+      break;
+    default:
+      alert('Upss. Opción incorrecta, intente con una de las opciones.');
+      break;
+  }
+
