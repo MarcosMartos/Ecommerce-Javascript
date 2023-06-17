@@ -1,234 +1,259 @@
-
 /* Generales */
 
-:root{
-    --gris-principal: #3e3e3e;
-    --gris-claro: #7c7c7c;
-    --blanco-sucio: #f6f6f6;
-    --grisaceo: #dddddd;
-    --rojo: #ba2c2c;
+:root {
+  --gris-principal: #222222;
+  --gris-claro: #696969;
+  --blanco-sucio: #f6f6f6;
+  --grisaceo: #dddddd;
+  --rojo: #ba2c2c;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, input, textarea, ul{
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+input,
+textarea,
+ul {
+  margin: 0;
+  padding: 0;
 }
 
 ul {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-.contenedorPrincipal{
-    display: grid;
-    grid-template-columns: 1fr 4fr;
-    background-color: var(--gris-principal);
+.contenedorPrincipal {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  background-color: var(--gris-principal);
 }
 
 /* Barra lateral de navegacion */
 
-aside{
-    padding: 2rem;
-    padding-right: 0;
-    color: var(--blanco-sucio);
-    height: 100vh;
-    position: sticky;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+aside {
+  padding: 2rem;
+  padding-right: 0;
+  color: var(--blanco-sucio);
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.logo{
-    font-weight: 400;
-    font-size: 1.4rem;
-    padding-top: 1rem;
+.logo {
+  font-weight: 400;
+  font-size: 1.4rem;
+  padding-top: 1rem;
 }
 
-.menu{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.boton-menu{
-    background-color: transparent;
-    border: 0;
-    color: var(--blanco-sucio);
-    font-size: 1rem;
-    font-weight: 600;
-    align-items: center;
-    cursor: pointer;
-    padding: 1rem;
-    font-size: 0.95rem;
-    width: 100%;
+.boton-menu {
+  background-color: transparent;
+  border: 0;
+  color: var(--blanco-sucio);
+  font-size: 1rem;
+  font-weight: 600;
+  align-items: center;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 0.95rem;
+  width: 100%;
 }
 
-.boton-menu.active{
-    background-color: var(--blanco-sucio);
-    color: var(--gris-principal);
-    width: 100%;
+.boton-menu.active {
+  background-color: var(--blanco-sucio);
+  color: var(--gris-principal);
+  width: 100%;
 }
 
-.boton-carrito{
-    margin-top: 2rem;
+.boton-carrito {
+  margin-top: 2rem;
 }
 
-.texto-footer{
-    color: var(--gris-claro);
-    font-size: 0,85rem ;
+.texto-footer {
+  color: var(--gris-claro);
+  font-size: 0, 85rem;
 }
 
 /* Seccion de los productos */
 
-main{
-    background-color: var(--blanco-sucio);
-    margin: 1rem;
-    padding: 2rem;
+main {
+  background-color: var(--blanco-sucio);
+  margin: 1rem;
+  padding: 2rem;
 }
 
-.titulo-principal{
-    color: var(--gris-principal);
-    margin-bottom: 2rem;
+.titulo-principal {
+  color: var(--gris-principal);
+  margin-bottom: 2rem;
 }
 
-.contenedor-productos{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
+.contenedor-productos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
 }
 
-.producto-imagen{
-    max-width: 100%;
+.producto-imagen {
+  max-width: 100%;
 }
 
-.producto-detalles{
-    background-color: var(--gris-principal);
-    color: var(--blanco-sucio);
-    padding: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+.producto-detalles {
+  background-color: var(--gris-principal);
+  color: var(--blanco-sucio);
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
-.producto-titulo{
-    font-size: 1rem;
+.producto-titulo {
+  font-size: 1rem;
 }
 
-.producto-agregar{
-    border: 0;
-    background-color: var(--blanco-sucio);
-    color: var(--gris-principal);
-    padding: 0.4rem;
-    cursor: pointer;
-    border: 2px solid var(--blanco-sucio);
-    transition: background-color 0.2s, color 0.2s;
+.producto-agregar {
+  border: 0;
+  background-color: var(--blanco-sucio);
+  color: var(--gris-principal);
+  padding: 0.4rem;
+  cursor: pointer;
+  border: 2px solid var(--blanco-sucio);
+  transition: background-color 0.2s, color 0.2s;
 }
 
-.producto-agregar:hover{
-    background-color: var(--gris-principal);
-    color: var(--blanco-sucio);
+.producto-agregar:hover {
+  background-color: var(--gris-principal);
+  color: var(--blanco-sucio);
 }
 
 /* Estilos del carrito */
 
-.contenedor-carrito{
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+.contenedor-carrito {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.carrito-vacio{
-    color: var(--gris-principal);
+.carrito-vacio {
+  color: var(--gris-principal);
 }
 
-.carrito-productos{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.carrito-productos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.carrito-producto{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--grisaceo);
-    color: var(--gris-principal);
-    padding: 0.5rem;
-    padding-right: 1.5rem;
+.carrito-producto {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--grisaceo);
+  color: var(--gris-principal);
+  padding: 0.5rem;
+  padding-right: 1.5rem;
 }
 
-.carrito-producto-imagen{
-    width: 8rem;
+.carrito-producto-imagen {
+  width: 8rem;
 }
 
-.carrito-producto small{
-    font-size: 0.75rem;
+.carrito-producto small {
+  font-size: 0.75rem;
 }
 
-.producto-carrito-eliminar{
-    border: 0;
-    background-color: transparent;
-    color: var(--rojo);
-    cursor: pointer;
+.producto-carrito-eliminar {
+  border: 0;
+  background-color: transparent;
+  color: var(--rojo);
+  cursor: pointer;
 }
 
-.carrito-acciones{
-    display: flex;
-    justify-content: space-between;
+.carrito-acciones {
+  display: flex;
+  justify-content: space-between;
 }
 
-.carrito-acciones-vaciar{
-    border: 0;
-    background-color: var(--grisaceo);
-    padding: 1rem;
-    color: var(--gris-principal);
-    text-transform: uppercase;
-    cursor: pointer;
+.carrito-acciones-vaciar {
+  border: 0;
+  background-color: var(--grisaceo);
+  padding: 1rem;
+  color: var(--gris-principal);
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
-.carrito-acciones-derecha{
-    display: flex;
+.carrito-acciones-derecha {
+  display: flex;
 }
 
-.carrito-acciones-total{
-    display: flex;
-    border: 0;
-    background-color: var(--grisaceo);
-    padding: 1rem;
-    color: var(--gris-principal);
-    text-transform: uppercase;
-    gap: 1rem;
+.carrito-acciones-total {
+  display: flex;
+  border: 0;
+  background-color: var(--grisaceo);
+  padding: 1rem;
+  color: var(--gris-principal);
+  text-transform: uppercase;
+  gap: 1rem;
 }
 
-.carrito-acciones-comprar{
-    border: 0;
-    background-color: var(--gris-principal);
-    padding: 1rem;
-    color: var(--blanco-sucio);
-    text-transform: uppercase;
-    cursor: pointer;
+.carrito-acciones-comprar {
+  border: 0;
+  background-color: var(--gris-principal);
+  padding: 1rem;
+  color: var(--blanco-sucio);
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
-.carrito-acciones-eliminar{
-    border: 0;
-    background-color: var(--gris-principal);
-    padding: 1rem;
-    color: var(--blanco-sucio);
-    text-transform: uppercase;
-    cursor: pointer;
+.carrito-acciones-eliminar {
+  border: 0;
+  background-color: var(--gris-principal);
+  padding: 1rem;
+  color: var(--blanco-sucio);
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
-.oculto{
-    display: none;
+.oculto {
+  display: none;
+}
+
+/* SweetAlert */
+.swal2-styled {
+  background-color: var(--gris-claro) !important;
+}
+
+/* Toastify */
+.tarjetaTostify {
+  height: 60px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--grisaceo);
 }

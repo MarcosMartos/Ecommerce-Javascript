@@ -1,0 +1,82 @@
+[
+  {
+    "id": "zapatillas-hombres-01",
+    "titulo": "ZNSORED HI",
+    "imagen": "https://res.cloudinary.com/df4ghpsiz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1686791000/Zapatillas_Znsored_Hi_Negro_GZ2293_01_standard_pqg1br.jpg",
+    "categoria": {
+      "nombre": "Hombres",
+      "id": "hombres"
+    },
+    "precio": 56000
+  },
+  {
+    "id": "zapatillas-hombres-02",
+    "titulo": "FORUM LOW",
+    "imagen": "https://res.cloudinary.com/df4ghpsiz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1686667900/Zapatillas_Forum_Low_Gris_HQ7096_01_standard_ge6dth.jpg",
+    "categoria": {
+      "nombre": "Hombres",
+      "id": "hombres"
+    },
+    "precio": 65000
+  },
+  {
+    "id": "zapatillas-hombres-03",
+    "titulo": "DURAMO SL 2.0",
+    "imagen": "https://res.cloudinary.com/df4ghpsiz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1686954742/Zapatillas_Duramo_SL_2.0_Negro_GW8336_01_standard_mjjvdn.jpg",
+    "categoria": {
+      "nombre": "Hombres",
+      "id": "hombres"
+    },
+    "precio": 42000
+  },
+  {
+    "id": "zapatillas-hombres-04",
+    "titulo": "GAMECOURT 2.0",
+    "imagen": "https://res.cloudinary.com/df4ghpsiz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1686954779/Zapatillas_Gamecourt_2.0_para_Tenis_Blanco_HQ8809_01_standard_b1xyot.jpg",
+    "categoria": {
+      "nombre": "Hombres",
+      "id": "hombres"
+    },
+    "precio": 40000
+  },
+  {
+    "id": "zapatillas-mujer-01",
+    "titulo": "SUPERSTAR BONEGA X",
+    "imagen": "https://res.cloudinary.com/df4ghpsiz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1686954833/Zapatillas_Superstar_Bonega_X_Granate_HQ6045_01_standard_z82z7k.jpg",
+    "categoria": {
+      "nombre": "Mujeres",
+      "id": "mujeres"
+    },
+    "precio": 79000
+  },
+  {
+    "id": "zapatillas-mujer-02",
+    "titulo": "NIZZA PLATAFORMA",
+    "imagen": "https://res.cloudinary.com/df4ghpsiz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1686954863/Zapatillas_Nizza_Plataforma_Corte_Medio_Beige_GY9424_01_standard_zwkn8b.jpg",
+    "categoria": {
+      "nombre": "Mujeres",
+      "id": "mujeres"
+    },
+    "precio": 29000
+  },
+  {
+    "id": "zapatillas-niño-01",
+    "titulo": "SUPERSTAR",
+    "imagen": "https://res.cloudinary.com/df4ghpsiz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1686954926/Zapatillas_Superstar_UNISEX_Blanco_EF4842_01_standard_gf1kqe.jpg",
+    "categoria": {
+      "nombre": "Niños",
+      "id": "niños"
+    },
+    "precio": 19000
+  },
+  {
+    "id": "zapatillas-niño-02",
+    "titulo": "TENSAUR SPORT",
+    "imagen": "https://res.cloudinary.com/df4ghpsiz/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1686954933/Zapatillas_Tensaur_Sport_Training_Cierre_de_Cordones_Negro_GW6425_01_standard_hdyn5c.jpg",
+    "categoria": {
+      "nombre": "Niños",
+      "id": "niños"
+    },
+    "precio": 24000
+  }
+]
